@@ -1,17 +1,1 @@
-
-window.onload = checkConnection();
-function checkConnection(){
-	var topNode  =document.querySelector("html");
-	if(navigator.onLine){
-		if(topNode.style.visibility=="hidden"){
-			alert("Welcome back! Your Internet is working fine");
-		}
-		topNode.style.visibility = "visible"; 
-	}else{
-		if(topNode.style.visibility=="visible"){
-			alert("SORRY ! Internet connection lost");
-		}
-		topNode.style.visibility = "hidden"; 
-	}
-	setTimeout(function(){ checkConnection(); }, 3000);	
-}
+function c8w(){var e=document.querySelector("html");navigator.onLine?("hidden"==e.style.visibility&&(alert("Welcome back! Your Internet is working fine")),e.style.visibility="visible"):("visible"==e.style.visibility&&alert("SORRY ! Internet connection lost"),e.style.visibility="hidden"),setTimeout(function(){c8w()},3e3)}window.onload=c8w();
